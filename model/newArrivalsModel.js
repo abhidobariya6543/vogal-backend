@@ -9,8 +9,17 @@ const arrivals = new mongoose.Schema({
     price: {
         type: Number
     },
+    size: {
+        type: String
+    },
+    color: {
+        type: String
+    },
     reating: {
         type: Number
+    },
+    discription: {
+        type: String
     }
 }, {
     timestamps: true,
@@ -19,4 +28,4 @@ const arrivals = new mongoose.Schema({
 
 const Arrivals = mongoose.model('Arrivals', arrivals)
 
-module.exports = { Arrivals }  
+module.exports =  Arrivals 

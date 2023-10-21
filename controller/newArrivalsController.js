@@ -1,4 +1,4 @@
-const { Arrivals } = require('../model/newArrivalsModel')
+const  Arrivals  = require('../model/newArrivalsModel')
 
 const createArrivals = async (req, res) => {
     const files = req.files;
@@ -6,13 +6,19 @@ const createArrivals = async (req, res) => {
     const {
         name,
         price,
-        reating
+        size,
+        color,
+        reating,
+        discription
     } = req.body
     const obj = new Arrivals({
         image: imagePaths,
         name,
         price,
-        reating
+        size,
+        color,
+        reating,
+        discription
     })
     try {
         const data = await obj.save()
